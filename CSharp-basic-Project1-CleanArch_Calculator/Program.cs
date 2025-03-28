@@ -1,3 +1,4 @@
+using CSharp_basic_Project1_CleanArch_Calculator.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace CSharp_basic_Project1_CleanArch_Calculator
@@ -14,7 +15,13 @@ namespace CSharp_basic_Project1_CleanArch_Calculator
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new Form1());
+            var services = new ServiceCollection();
+
+            services.RegisterServices();
+
+            var serviceProvider = services.BuildServiceProvider();
+
+            Application.Run(serviceProvider.GetRequiredService<Form1>());
         }
     }
 }
