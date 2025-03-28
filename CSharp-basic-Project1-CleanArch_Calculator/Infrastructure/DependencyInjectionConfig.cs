@@ -11,7 +11,7 @@ namespace CSharp_basic_Project1_CleanArch_Calculator.Infrastructure
     {
         public static void RegisterServices(this IServiceCollection services)
         {
-            //TODO
+            services.AddSingleton<EventHandler>();
         }
     }
 }
