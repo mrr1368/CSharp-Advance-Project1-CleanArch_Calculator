@@ -14,13 +14,7 @@ namespace CSharp_basic_Project1_CleanArch_Calculator
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            var services = new ServiceCollection();
-
-            services.RegisterServices();
-
-            var serviceProvider = services.BuildServiceProvider(); 
-
-            Application.Run(serviceProvider.GetRequiredService<Form1>());
+            Application.Run(new Form1());
         }
     }
 }

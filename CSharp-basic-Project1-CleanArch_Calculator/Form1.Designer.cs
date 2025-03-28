@@ -90,7 +90,6 @@
             btn0.Tag = "0";
             btn0.Text = "0";
             btn0.UseVisualStyleBackColor = false;
-            btn0.Click += button1_Click;
             // 
             // btn00
             // 
@@ -391,7 +390,6 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CleanArch_Calculator";
-            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
