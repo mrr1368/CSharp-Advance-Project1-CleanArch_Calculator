@@ -29,4 +29,10 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Domain\" />
+    <Folder Include="App\" />
+    <Folder Include="Infrastructure\" />
+  </ItemGroup>
+
 </Project>
