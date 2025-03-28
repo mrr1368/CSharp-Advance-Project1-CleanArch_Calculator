@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using CSharp_basic_Project1_CleanArch_Calculator.App.Services;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace CSharp_basic_Project1_CleanArch_Calculator.Infrastructure
     {
         public static void RegisterServices(this IServiceCollection services)
         {
-            services.AddSingleton<EventHandler>();
+            services.AddSingleton<InputEventHandler>();
         }
     }
 }

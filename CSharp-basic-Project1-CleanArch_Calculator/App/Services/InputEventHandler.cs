@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharp_basic_Project1_CleanArch_Calculator.App.Services
 {
-    public class EventHandler
+    public class InputEventHandler
     {
         public void KeyDownEventHandler(object? sender, KeyEventArgs e)
         {
