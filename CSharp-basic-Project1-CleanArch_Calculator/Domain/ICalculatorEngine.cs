@@ -8,6 +8,6 @@ namespace CSharp_basic_Project1_CleanArch_Calculator.Domain
 {
     public interface ICalculatorEngine
     {
-        string Evaluate(string expression);
+        string Evaluate(string input);
     }
 }
