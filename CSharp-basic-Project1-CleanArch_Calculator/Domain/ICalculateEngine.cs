@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharp_basic_Project1_CleanArch_Calculator.Domain
 {
-    public interface ICalculatorEngine
+    public interface ICalculateEngine
     {
         string Evaluate(string input);
     }
