@@ -59,6 +59,7 @@
             txtInput.Enabled = false;
             txtInput.Font = new Font("Tahoma", 20F);
             txtInput.Location = new Point(12, 14);
+            txtInput.MaxLength = 15;
             txtInput.Multiline = true;
             txtInput.Name = "txtInput";
             txtInput.Size = new Size(378, 57);
@@ -87,6 +88,7 @@
             btn0.Name = "btn0";
             btn0.Size = new Size(90, 71);
             btn0.TabIndex = 3;
+            btn0.TabStop = false;
             btn0.Tag = "0";
             btn0.Text = "0";
             btn0.UseVisualStyleBackColor = false;
@@ -102,6 +104,7 @@
             btn00.Name = "btn00";
             btn00.Size = new Size(90, 71);
             btn00.TabIndex = 4;
+            btn00.TabStop = false;
             btn00.Tag = "00";
             btn00.Text = "00";
             btn00.UseVisualStyleBackColor = false;
@@ -117,6 +120,7 @@
             btnMinus.Name = "btnMinus";
             btnMinus.Size = new Size(90, 71);
             btnMinus.TabIndex = 5;
+            btnMinus.TabStop = false;
             btnMinus.Tag = ".";
             btnMinus.Text = ".";
             btnMinus.UseVisualStyleBackColor = false;
@@ -132,6 +136,7 @@
             btn1.Name = "btn1";
             btn1.Size = new Size(90, 71);
             btn1.TabIndex = 6;
+            btn1.TabStop = false;
             btn1.Tag = "1";
             btn1.Text = "1";
             btn1.UseVisualStyleBackColor = false;
@@ -147,6 +152,7 @@
             btn2.Name = "btn2";
             btn2.Size = new Size(90, 71);
             btn2.TabIndex = 7;
+            btn2.TabStop = false;
             btn2.Tag = "2";
             btn2.Text = "2";
             btn2.UseVisualStyleBackColor = false;
@@ -162,6 +168,7 @@
             btn3.Name = "btn3";
             btn3.Size = new Size(90, 71);
             btn3.TabIndex = 8;
+            btn3.TabStop = false;
             btn3.Tag = "3";
             btn3.Text = "3";
             btn3.UseVisualStyleBackColor = false;
@@ -177,6 +184,7 @@
             btn4.Name = "btn4";
             btn4.Size = new Size(90, 71);
             btn4.TabIndex = 9;
+            btn4.TabStop = false;
             btn4.Tag = "4";
             btn4.Text = "4";
             btn4.UseVisualStyleBackColor = false;
@@ -192,6 +200,7 @@
             btn5.Name = "btn5";
             btn5.Size = new Size(90, 71);
             btn5.TabIndex = 10;
+            btn5.TabStop = false;
             btn5.Tag = "5";
             btn5.Text = "5";
             btn5.UseVisualStyleBackColor = false;
@@ -207,6 +216,7 @@
             btn6.Name = "btn6";
             btn6.Size = new Size(90, 71);
             btn6.TabIndex = 11;
+            btn6.TabStop = false;
             btn6.Tag = "6";
             btn6.Text = "6";
             btn6.UseVisualStyleBackColor = false;
@@ -222,6 +232,7 @@
             btn7.Name = "btn7";
             btn7.Size = new Size(90, 71);
             btn7.TabIndex = 12;
+            btn7.TabStop = false;
             btn7.Tag = "7";
             btn7.Text = "7";
             btn7.UseVisualStyleBackColor = false;
@@ -237,6 +248,7 @@
             btn8.Name = "btn8";
             btn8.Size = new Size(90, 71);
             btn8.TabIndex = 13;
+            btn8.TabStop = false;
             btn8.Tag = "8";
             btn8.Text = "8";
             btn8.UseVisualStyleBackColor = false;
@@ -252,6 +264,7 @@
             btn9.Name = "btn9";
             btn9.Size = new Size(90, 71);
             btn9.TabIndex = 14;
+            btn9.TabStop = false;
             btn9.Tag = "9";
             btn9.Text = "9";
             btn9.UseVisualStyleBackColor = false;
@@ -266,6 +279,7 @@
             btnDel.Name = "btnDel";
             btnDel.Size = new Size(90, 71);
             btnDel.TabIndex = 16;
+            btnDel.TabStop = false;
             btnDel.Tag = "DEL";
             btnDel.Text = "C";
             btnDel.UseVisualStyleBackColor = false;
@@ -280,6 +294,7 @@
             btnRemove.Name = "btnRemove";
             btnRemove.Size = new Size(186, 71);
             btnRemove.TabIndex = 17;
+            btnRemove.TabStop = false;
             btnRemove.Tag = "BACK";
             btnRemove.Text = "⌫";
             btnRemove.UseVisualStyleBackColor = false;
@@ -294,7 +309,8 @@
             btnEqual.Name = "btnEqual";
             btnEqual.Size = new Size(90, 71);
             btnEqual.TabIndex = 18;
-            btnEqual.Tag = "=";
+            btnEqual.TabStop = false;
+            btnEqual.Tag = "ENTER";
             btnEqual.Text = "=";
             btnEqual.UseVisualStyleBackColor = false;
             // 
@@ -308,6 +324,7 @@
             btnSum.Name = "btnSum";
             btnSum.Size = new Size(90, 71);
             btnSum.TabIndex = 19;
+            btnSum.TabStop = false;
             btnSum.Tag = "+";
             btnSum.Text = "+";
             btnSum.UseVisualStyleBackColor = false;
@@ -322,6 +339,7 @@
             btnSub.Name = "btnSub";
             btnSub.Size = new Size(90, 71);
             btnSub.TabIndex = 20;
+            btnSub.TabStop = false;
             btnSub.Tag = "-";
             btnSub.Text = "-";
             btnSub.UseVisualStyleBackColor = false;
@@ -336,6 +354,7 @@
             btnMul.Name = "btnMul";
             btnMul.Size = new Size(90, 71);
             btnMul.TabIndex = 21;
+            btnMul.TabStop = false;
             btnMul.Tag = "*";
             btnMul.Text = "*";
             btnMul.UseVisualStyleBackColor = false;
@@ -350,6 +369,7 @@
             btnDiv.Name = "btnDiv";
             btnDiv.Size = new Size(90, 71);
             btnDiv.TabIndex = 22;
+            btnDiv.TabStop = false;
             btnDiv.Tag = "/";
             btnDiv.Text = "/";
             btnDiv.UseVisualStyleBackColor = false;
@@ -390,6 +410,7 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CleanArch_Calculator";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }

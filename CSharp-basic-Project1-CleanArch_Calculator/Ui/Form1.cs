@@ -1,4 +1,5 @@
-using CSharp_basic_Project1_CleanArch_Calculator.App.Services;
+using CSharp_basic_Project1_CleanArch_Calculator.App.Services.InputEventHandler;
+using System;
 
 namespace CSharp_basic_Project1_CleanArch_Calculator
 {
@@ -15,6 +16,8 @@ namespace CSharp_basic_Project1_CleanArch_Calculator
             this.txtInput.Enabled = false;
             this.txtResult.Enabled = false;
 
+            _inputEventHandler.OnDataProcessed += UpdateTextBoxes;
+
             this.KeyDown += _inputEventHandler.KeyDownEventHandler;
 
             foreach (Control control in this.Controls)
@@ -30,6 +33,11 @@ namespace CSharp_basic_Project1_CleanArch_Calculator
         {
             txtInput.Text = inputData;
             txtResult.Text = resultData;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
