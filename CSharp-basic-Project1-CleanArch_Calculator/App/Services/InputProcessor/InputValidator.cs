@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CSharp_basic_Project1_CleanArch_Calculator.App.Services.InputProcessor
 {
     public class InputValidator
     {
-        private static readonly char[] Operator = { '+', '-', '*', '/' };
+        private const string Operators = "+-*/";
 
         public bool CanAddInput(string currentInput, string newInput)
         {
@@ -19,23 +15,24 @@ namespace CSharp_basic_Project1_CleanArch_Calculator.App.Services.InputProcessor
 
             if (newInput == ".")
             {
-                int lastOperatorIndex = currentInput.LastIndexOfAny(Operator);
+                int lastOperatorIndex = currentInput.LastIndexOfAny(Operators.ToCharArray());
 
-                string lastNumberPart = lastOperatorIndex == -1 ? currentInput : currentInput[(lastOperatorIndex + 1)..];
+                string lastNumberPart = lastOperatorIndex == -1
+                    ? currentInput
+                    : currentInput[(lastOperatorIndex + 1)..];
 
                 if (lastNumberPart.Contains('.')) return false;
 
-                if (lastChar == '+' || lastChar == '-' || lastChar == '*' || lastChar == '/')
-                    return false;
+                if (Operators.Contains(lastChar)) return false;
 
                 return true;
             }
 
             if (currentInput.Length > 0 && char.IsDigit(currentInput[0])) return true;
 
-            if (Operator.Contains(newInput[0]))
+            if (Operators.Contains(newInput[0]))
             {
-                if (Operator.Contains(lastChar)) return false;
+                if (Operators.Contains(lastChar)) return false;
 
                 return true;
             }

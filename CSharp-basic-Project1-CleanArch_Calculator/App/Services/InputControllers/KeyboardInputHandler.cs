@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace CSharp_basic_Project1_CleanArch_Calculator.App.Services.InputHandler
 {
-    public class KeyboardInputHandler(InputProcessorTest inputProcessor)
+    public class KeyboardInputHandler(InputProcessor.InputProcessor inputProcessor)
     {
-        private readonly InputProcessorTest _inputProcessor = inputProcessor;
+        private readonly InputProcessor.InputProcessor _inputProcessor = inputProcessor;
 
         public bool KeyboardManager(Keys keyCode)
         {

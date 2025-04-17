@@ -25,7 +25,7 @@ namespace CSharp_basic_Project1_CleanArch_Calculator.Infrastructure
             services.AddSingleton<DisplayManager>();
             services.AddSingleton<ICalculateEngine, ComputeCalculateEngine>();
 
-            services.AddSingleton<InputProcessorTest>();
+            services.AddSingleton<InputProcessor>();
             services.AddSingleton<InputValidator>(); 
             services.AddSingleton<ExitProcessor>(); 
         }

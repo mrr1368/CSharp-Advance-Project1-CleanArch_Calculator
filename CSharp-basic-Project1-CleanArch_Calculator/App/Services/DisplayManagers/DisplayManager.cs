@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace CSharp_basic_Project1_CleanArch_Calculator.App.Services.DisplayManagers
 {
-    public class DisplayManager(InputProcessorTest inputProcessor)
+    public class DisplayManager(InputProcessor.InputProcessor inputProcessor)
     {
-        private readonly InputProcessorTest _inputProcessor = inputProcessor;
+        private readonly InputProcessor.InputProcessor _inputProcessor = inputProcessor;
 
 
         public string DisplayInputData()
