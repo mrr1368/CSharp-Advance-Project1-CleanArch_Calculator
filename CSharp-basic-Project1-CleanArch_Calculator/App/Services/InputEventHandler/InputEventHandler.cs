@@ -1,10 +1,5 @@
 ﻿using CSharp_basic_Project1_CleanArch_Calculator.App.Services.InputHandler;
-using CSharp_basic_Project1_CleanArch_Calculator.App.Services.DisplayManager;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CSharp_basic_Project1_CleanArch_Calculator.App.Services.DisplayManagers;
 
 namespace CSharp_basic_Project1_CleanArch_Calculator.App.Services.InputEventHandler
 {
