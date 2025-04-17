@@ -7,28 +7,52 @@ using System.Threading.Tasks;
 
 namespace CSharp_basic_Project1_CleanArch_Calculator.App.Services.InputControllers
 {
+    /// <summary>
+    /// Handles keyboard input for the calculator.
+    /// This class listens for key presses and forwards the corresponding input to the input processor.
+    /// </summary>
     public class KeyboardInputHandler
     {
         private readonly InputProcessor.InputProcessor _inputProcessor;
+
+        /// <summary>
+        /// Event that triggers when the exit process is requested.
+        /// </summary>
         public event Action? ExitHandler;
 
+        /// <summary>
+        /// Constructor to inject the input processor dependency.
+        /// </summary>
+        /// <param name="inputProcessor">An instance of the input processor to handle input processing.</param>
         public KeyboardInputHandler(InputProcessor.InputProcessor inputProcessor)
         {
             _inputProcessor = inputProcessor;
             _inputProcessor.ExitProcess += OnExit;
         }
 
+        /// <summary>
+        /// Handles the keyboard input by converting the key pressed into a corresponding input string.
+        /// It then sends the input to the input processor for further processing.
+        /// </summary>
+        /// <param name="keyCode">The key pressed on the keyboard.</param>
+        /// <returns>Returns true if the input was successfully processed, false otherwise.</returns>
         public bool KeyboardManager(Keys keyCode)
         {
             string input = ConvertKeyToInput(keyCode);
 
             if (string.IsNullOrEmpty(input)) return false;
 
+            // Forward the input to the input processor for further handling
             _inputProcessor.AddInput(input);
 
             return true;
         }
 
+        /// <summary>
+        /// Converts the key code to the corresponding input string.
+        /// </summary>
+        /// <param name="keycode">The key code of the pressed key.</param>
+        /// <returns>A string representing the corresponding input.</returns>
         private static string ConvertKeyToInput(Keys keycode) => keycode switch
         {
             Keys.D0 or Keys.NumPad0 => "0",
@@ -54,6 +78,9 @@ namespace CSharp_basic_Project1_CleanArch_Calculator.App.Services.InputControlle
             _ => string.Empty,
         };
 
+        /// <summary>
+        /// Triggers the exit handler event when exit is requested.
+        /// </summary>
         public void OnExit()
         {
             ExitHandler?.Invoke();
