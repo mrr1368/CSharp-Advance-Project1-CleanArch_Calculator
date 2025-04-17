@@ -1,3 +1,4 @@
+﻿using CSharp_basic_Project1_CleanArch_Calculator.App.Services.ErrorHandling;
 using CSharp_basic_Project1_CleanArch_Calculator.App.Services.InputEventHandler;
 using System;
 
@@ -17,15 +18,43 @@ namespace CSharp_basic_Project1_CleanArch_Calculator
             this.txtResult.Enabled = false;
 
             _inputEventHandler.OnDataProcessed += UpdateTextBoxes;
+            _inputEventHandler.OnExitRequested += ExitApplication;
 
-            this.KeyDown += _inputEventHandler.KeyDownEventHandler;
+            this.KeyDown += Form1_KeyDown;
 
             foreach (Control control in this.Controls)
             {
                 if (control is Button)
                 {
-                    control.Click += _inputEventHandler.ButtonHandler;
+                    control.Click += Button_Click;
                 }
+            }
+        }
+
+
+        private void Form1_KeyDown(object? sender, KeyEventArgs e)
+        {
+            SafeExecute(() => _inputEventHandler.KeyDownEventHandler(sender, e));
+        }
+
+        private void Button_Click(object? sender, EventArgs e)
+        {
+            SafeExecute(() => _inputEventHandler.ButtonHandler(sender, e));
+        }
+
+        private void SafeExecute(Action action)
+        {
+            try
+            {
+                action();
+            }
+            catch (InvalidExpressionException ex)
+            {
+                MessageBox.Show(ex.Message, "خطای محاسباتی", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("خطای غیرمنتظره: " + ex.Message, "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -35,9 +64,9 @@ namespace CSharp_basic_Project1_CleanArch_Calculator
             txtResult.Text = resultData;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void ExitApplication()
         {
-
+            Application.Exit();
         }
     }
 }
