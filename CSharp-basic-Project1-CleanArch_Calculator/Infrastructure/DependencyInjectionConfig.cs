@@ -1,5 +1,5 @@
 ﻿using CSharp_basic_Project1_CleanArch_Calculator.App.Services.CalculateEngine;
-using CSharp_basic_Project1_CleanArch_Calculator.App.Services.DisplayManager;
+using CSharp_basic_Project1_CleanArch_Calculator.App.Services.DisplayManagers;
 using CSharp_basic_Project1_CleanArch_Calculator.App.Services.InputEventHandler;
 using CSharp_basic_Project1_CleanArch_Calculator.App.Services.InputHandler;
 using CSharp_basic_Project1_CleanArch_Calculator.App.Services.InputProcessor;
