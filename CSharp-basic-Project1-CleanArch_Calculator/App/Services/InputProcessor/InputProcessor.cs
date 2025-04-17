@@ -16,7 +16,7 @@ namespace CSharp_basic_Project1_CleanArch_Calculator.App.Services.InputProcessor
         private readonly StringBuilder _input = new();
         private string _result = string.Empty;
 
-        public event Action<string>? ExitProcess;
+        public event Action? ExitProcess;
 
         public InputProcessor(ICalculateEngine calculateEngine, InputValidator inputValidator, ExitProcessor exitProcessor)
         {
@@ -34,7 +34,7 @@ namespace CSharp_basic_Project1_CleanArch_Calculator.App.Services.InputProcessor
                 case "DEL": DeleteInput(); DeleteResult(); break;
                 case "BACK": HandleBackSpace(); break;
                 case "ENTER": Calculate(); break;
-                case "ESC": _exitProcessor.ExitApp(); break;
+                case "ESCAPE": _exitProcessor.ExitApp(); break;
             }
 
             if (_input.Length > 20) return;
@@ -51,7 +51,7 @@ namespace CSharp_basic_Project1_CleanArch_Calculator.App.Services.InputProcessor
         private void DeleteInput() => _input.Clear();
         private void DeleteResult() => _result = string.Empty;
 
-        private void OnExitRequested() => ExitProcess?.Invoke("EXIT");
+        private void OnExitRequested() => ExitProcess?.Invoke();
 
         public string GetInput() => _input.ToString();
         public string GetResult() => _result.ToString();
