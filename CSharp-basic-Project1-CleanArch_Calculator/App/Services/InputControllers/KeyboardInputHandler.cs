@@ -5,11 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharp_basic_Project1_CleanArch_Calculator.App.Services.InputHandler
+namespace CSharp_basic_Project1_CleanArch_Calculator.App.Services.InputControllers
 {
-    public class KeyboardInputHandler(InputProcessor.InputProcessor inputProcessor)
+    public class KeyboardInputHandler
     {
-        private readonly InputProcessor.InputProcessor _inputProcessor = inputProcessor;
+        private readonly InputProcessor.InputProcessor _inputProcessor;
+        public event Action? ExitHandler;
+
+        public KeyboardInputHandler(InputProcessor.InputProcessor inputProcessor)
+        {
+            _inputProcessor = inputProcessor;
+            _inputProcessor.ExitProcess += OnExit;
+        }
 
         public bool KeyboardManager(Keys keyCode)
         {
@@ -45,6 +52,11 @@ namespace CSharp_basic_Project1_CleanArch_Calculator.App.Services.InputHandler
             Keys.Escape => "ESCAPE",
             Keys.Space => string.Empty,
             _ => string.Empty,
-        };       
+        };
+
+        public void OnExit()
+        {
+            ExitHandler?.Invoke();
+        }
     }
 }
