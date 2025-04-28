@@ -1,9 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mrr1368/CSharp-Advance-Project1-CleanArch_Calculator/refs/heads/master/gitAssets/CleanArchCalculator.png" alt="CSharp-Advance-Project1-CleanArch_Calculator Banner" />
-</p>
-
-<p align="center">
-  <img src="https://github.com/mrr1368/SQL-Server-Developer-Courses/raw/main/asset/SQL%20Server.png" alt="SQL-Server-Developer-Courses Banner" />
+  <img src="https://raw.githubusercontent.com/mrr1368/CSharp-Advance-Project1-CleanArch_Calculator/refs/heads/master/asset/CleanArchCalculator.png" alt="CSharp-Advance-Project1-CleanArch_Calculator Banner" />
 </p>
 
 
