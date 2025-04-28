@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="https://github.com/mrr1368/CSharp-Advance-Project1-CleanArch_Calculator/raw/main/gitAssets/CleanArch_Calculator.png" alt="CSharp-Advance-Project1-CleanArch_Calculator Banner" />
+</p>
+
+
+
 # 🚀 پروژه ماشین‌حساب با معماری تمیز (Clean Architecture)
 
 سلام! 😎 خوش اومدید به پروژه من! اینجا یه ماشین‌حساب داریم که با اصول معماری تمیز پیاده‌سازی شده و به صورت گام به گام با استفاده از مفاهیم **Dependency Injection**، **SOLID Principles** و **Responsibility Segregation** ساخته شده.
