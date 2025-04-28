@@ -1,4 +1,6 @@
-
+<p align="center">
+  <img src="https://github.com/mrr1368/CSharp-Advance-Project1-CleanArch_Calculator/raw/main/gitAssets/CleanArch_Calculator.png" alt="Clean Architecture Calculator Project Banner" />
+</p>
 
 
 
